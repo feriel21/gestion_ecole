@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentDashController;
+use App\Http\Controllers\ProfController;
+use App\Http\Controllers\ProfDashController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +18,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', function () {
+    return view('login');
 });
+Route::post("/login",[StudentController::class,'login']);
+Route::get("/",[StudentDashController::class,'index']);
+
+Route::post("/loginP",[ProfController::class,'login']);
+Route::get("/P",[ProfDashController::class,'ind']);
