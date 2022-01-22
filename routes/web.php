@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentDashController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,8 +14,8 @@ use App\Http\Controllers\StudentController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/login', function () {
     return view('login');
 });
 Route::post("/login",[StudentController::class,'login']);
+Route::get("/",[StudentDashController::class,'index']);
