@@ -17,6 +17,7 @@ class StudentController extends Controller
         }
         else{
             $req->session()->put('student',$student);
+            return redirect('/');
         }
     }
 }
