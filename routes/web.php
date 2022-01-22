@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentDashController;
+use App\Http\Controllers\ProfController;
+use App\Http\Controllers\ProfDashController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +23,6 @@ Route::get('/login', function () {
 });
 Route::post("/login",[StudentController::class,'login']);
 Route::get("/",[StudentDashController::class,'index']);
+
+Route::post("/loginP",[ProfController::class,'login']);
+Route::get("/P",[ProfDashController::class,'ind']);

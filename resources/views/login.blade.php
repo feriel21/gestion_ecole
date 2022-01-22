@@ -11,7 +11,7 @@
 <body>
     <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="login" method="POST">
+                <form action="loginP" method="POST">
                     <h1>Sign In as Professor</h1>
                     <span>using your university email </span>
                     @csrf
